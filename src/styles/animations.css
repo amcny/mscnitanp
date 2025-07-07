@@ -1,0 +1,470 @@
+/* Custom 3D animations and effects */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(0, 102, 255, 0.8);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-30px) rotate(120deg); }
+  66% { transform: translateY(-60px) rotate(240deg); }
+}
+
+@keyframes circuit-flow {
+  0% { opacity: 0; transform: translateX(-100px); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(100px); }
+}
+
+@keyframes matrix-rain {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes hexagon-pulse {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.3; }
+  50% { transform: scale(1.1) rotate(180deg); opacity: 0.7; }
+}
+
+@keyframes data-stream {
+  0% { transform: translateY(100vh) scaleY(0); }
+  50% { transform: translateY(0) scaleY(1); }
+  100% { transform: translateY(-100vh) scaleY(0); }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes menuSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 3D Card effects */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.card-3d:hover {
+  transform: translateZ(10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 25px 50px rgba(0, 255, 255, 0.2);
+}
+
+.card-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.card-glow:hover::before {
+  left: 100%;
+}
+
+/* Button 3D effects */
+.btn-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.btn-3d:hover {
+  transform: translateZ(5px);
+  box-shadow: 0 15px 30px rgba(0, 102, 255, 0.4);
+}
+
+.btn-3d:active {
+  transform: translateZ(2px);
+}
+
+/* Enhanced Glassmorphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-nav {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced mobile blur effect */
+.backdrop-blur-3xl {
+  backdrop-filter: blur(64px);
+  -webkit-backdrop-filter: blur(64px);
+}
+
+/* Mobile Navigation Styles */
+.mobile-nav-overlay {
+  animation: menuSlideIn 0.3s ease-out;
+}
+
+.mobile-nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, #00ffff, #0066ff);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav-item:hover::before {
+  transform: scaleY(1);
+}
+
+/* Back to Top Button Enhanced Styles */
+.back-to-top-glow {
+  position: relative;
+}
+
+.back-to-top-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #00ffff, #0066ff, #8a2be2, #00ffff);
+  border-radius: 50%;
+  z-index: -1;
+  animation: glow 2s linear infinite;
+  background-size: 400% 400%;
+}
+
+/* Enhanced Parallax background with sci-fi patterns */
+.parallax-bg {
+  background-image: 
+    /* Circuit board patterns */
+    linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.03) 25%, rgba(0, 255, 255, 0.03) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.03) 75%, rgba(0, 255, 255, 0.03) 76%, transparent 77%, transparent),
+    linear-gradient(0deg, transparent 24%, rgba(0, 102, 255, 0.03) 25%, rgba(0, 102, 255, 0.03) 26%, transparent 27%, transparent 74%, rgba(0, 102, 255, 0.03) 75%, rgba(0, 102, 255, 0.03) 76%, transparent 77%, transparent),
+    /* Hexagonal pattern */
+    radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+    /* Data flow lines */
+    linear-gradient(45deg, transparent 40%, rgba(0, 255, 255, 0.05) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(0, 102, 255, 0.05) 50%, transparent 60%),
+    /* Base gradient */
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
+  background-size: 100px 100px, 100px 100px, 200px 200px, 150px 150px, 150px 150px, 400% 400%, 400% 400%, 400% 400%;
+  animation: gradient 15s ease infinite, circuit-flow 8s linear infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%, 0% 50%, 0% 0%, 0% 0%, 0% 0%, 0% 50%, 100% 50%, 50% 0%; }
+  50% { background-position: 50% 100%, 50% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 50%, 0% 50%, 100% 100%; }
+  100% { background-position: 0% 50%, 0% 50%, 0% 0%, 0% 0%, 0% 0%, 0% 50%, 100% 50%, 50% 0%; }
+}
+
+/* Enhanced Grid pattern overlay */
+.grid-pattern {
+  background-image: 
+    /* Main grid */
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    /* Secondary grid */
+    linear-gradient(rgba(0, 102, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 255, 0.05) 1px, transparent 1px),
+    /* Circuit traces */
+    linear-gradient(45deg, transparent 48%, rgba(0, 255, 255, 0.1) 49%, rgba(0, 255, 255, 0.1) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(138, 43, 226, 0.1) 49%, rgba(138, 43, 226, 0.1) 51%, transparent 52%);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px, 100px 100px, 100px 100px;
+  animation: grid-shift 20s linear infinite;
+}
+
+@keyframes grid-shift {
+  0% { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
+  100% { background-position: 50px 50px, 50px 50px, 10px 10px, 10px 10px, 100px 100px, 100px 100px; }
+}
+
+/* Hover tilt effect */
+.tilt-card {
+  transition: transform 0.3s ease;
+}
+
+.tilt-card:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(10deg) scale(1.05);
+}
+
+/* Text glow effects */
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 15px rgba(0, 102, 255, 0.7);
+}
+
+/* Floating elements */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-animation-delay {
+  animation: float 6s ease-in-out infinite 2s;
+}
+
+.float-animation-delay-2 {
+  animation: float 6s ease-in-out infinite 4s;
+}
+
+/* Enhanced particle effects */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(45deg, #00ffff, #0066ff);
+  border-radius: 50%;
+  animation: particle-float 8s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 40%; left: 80%; animation-delay: 2s; }
+.particle:nth-child(3) { top: 60%; left: 30%; animation-delay: 4s; }
+.particle:nth-child(4) { top: 80%; left: 70%; animation-delay: 6s; }
+
+/* Additional sci-fi elements */
+.particle:nth-child(5) { 
+  top: 10%; left: 60%; animation-delay: 1s; 
+  background: linear-gradient(45deg, #8a2be2, #00ffff);
+}
+.particle:nth-child(6) { 
+  top: 70%; left: 20%; animation-delay: 3s; 
+  background: linear-gradient(45deg, #0066ff, #8a2be2);
+}
+.particle:nth-child(7) { 
+  top: 30%; left: 90%; animation-delay: 5s; 
+  background: linear-gradient(45deg, #00ffff, #0066ff);
+}
+.particle:nth-child(8) { 
+  top: 90%; left: 50%; animation-delay: 7s; 
+  background: linear-gradient(45deg, #8a2be2, #0066ff);
+}
+
+/* Matrix-style data streams */
+.data-stream {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 255, 255, 0.8), transparent);
+  animation: data-stream 4s linear infinite;
+}
+
+.data-stream:nth-child(1) { left: 15%; animation-delay: 0s; }
+.data-stream:nth-child(2) { left: 35%; animation-delay: 1s; }
+.data-stream:nth-child(3) { left: 55%; animation-delay: 2s; }
+.data-stream:nth-child(4) { left: 75%; animation-delay: 3s; }
+
+/* Hexagonal tech elements */
+.hexagon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 255, 255, 0.1);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: hexagon-pulse 6s ease-in-out infinite;
+}
+
+.hexagon:nth-child(1) { top: 25%; left: 25%; animation-delay: 0s; }
+.hexagon:nth-child(2) { top: 45%; left: 75%; animation-delay: 2s; }
+.hexagon:nth-child(3) { top: 65%; left: 15%; animation-delay: 4s; }
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loading shimmer */
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Glowing border effect */
+.glow {
+  position: relative;
+}
+
+.glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00ffff, #0066ff, #8a2be2, #00ffff);
+  border-radius: inherit;
+  z-index: -1;
+  animation: glow 2s linear infinite;
+  background-size: 400% 400%;
+}
+
+/* Circuit board connection lines */
+.circuit-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.5), transparent);
+  animation: circuit-flow 3s linear infinite;
+}
+
+.circuit-line:nth-child(1) { 
+  top: 20%; left: 0; width: 100%; animation-delay: 0s; 
+}
+.circuit-line:nth-child(2) { 
+  top: 60%; left: 0; width: 100%; animation-delay: 1.5s; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mobile-nav-item {
+    animation: slideInUp 0.2s ease-out forwards;
+  }
+  
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.75rem;
+  }
+  
+  /* Mobile navigation specific styles */
+  .mobile-nav-overlay {
+    animation: menuSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-glow {
+    text-shadow: none;
+  }
+  
+  .text-glow-blue {
+    text-shadow: none;
+  }
+}
