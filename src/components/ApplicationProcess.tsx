@@ -45,7 +45,7 @@ const ApplicationProcess: React.FC = () => {
             Application Process
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Join Microsoft Learn Student Community through a simple and easy process
+            Become Microsoft Learn Student Ambassador through a simple and easy process
           </p>
         </div>
 
