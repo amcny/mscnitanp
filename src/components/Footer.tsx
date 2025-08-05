@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Mail, InstagramIcon } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -24,6 +24,9 @@ const Footer: React.FC = () => {
               </a>
               <a href="mailto:mlsc-nitandhra@outlook.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Mail className="w-5 h-5" />
+              </a>
+              <a href="https://www.instagram.com/mlsc_nitandhra/" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <InstagramIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
