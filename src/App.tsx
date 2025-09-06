@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import MLSAProgram from './components/MLSAProgram';
+import MSAProgram from './components/MSAProgram';
 import ClubMission from './components/ClubMission';
 import TechnologyFocus from './components/TechnologyFocus';
 import BenefitsGrid from './components/BenefitsGrid';
@@ -35,7 +35,7 @@ function App() {
     animatedElements.forEach(el => observer.observe(el));
 
     // Update page title
-    document.title = 'MLSC - NIT Andhra Pradesh';
+    document.title = 'MSC - NIT Andhra Pradesh';
 
     return () => {
       animatedElements.forEach(el => observer.unobserve(el));
@@ -46,7 +46,7 @@ function App() {
     <div className="min-h-screen bg-black text-white">
       <Header />
       <Hero />
-      <MLSAProgram />
+      <MSAProgram />
       <ClubMission />
       <TechnologyFocus />
       <BenefitsGrid />

@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
             Contact Us
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Get in touch with our Microsoft Learn Student Ambassador
+            Get in touch with our Microsoft Student Ambassador
           </p>
         </div>
 
@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
               </div>
 
               <h3 className="text-xl md:text-2xl font-bold text-white mb-2 text-glow">
-                Microsoft Ambassador
+                Microsoft Student Ambassador
               </h3>
               <p className="text-lg md:text-xl text-cyan-400 font-semibold mb-4 md:mb-6">
                 Chaitanya Pullagura

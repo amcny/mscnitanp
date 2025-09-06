@@ -45,7 +45,7 @@ const Header: React.FC = () => {
                   <rect x="12" y="12" width="10" height="10" fill="#ffb900"/>
                 </svg>
               </div>
-              <span className="text-white font-bold text-xl text-glow">MLSC x NIT ANP</span>
+              <span className="text-white font-bold text-xl text-glow">MSC x NIT ANP</span>
             </div>
 
             {/* Desktop Navigation */}

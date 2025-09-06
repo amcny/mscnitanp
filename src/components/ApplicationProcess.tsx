@@ -7,7 +7,7 @@ const ApplicationProcess: React.FC = () => {
       step: 1,
       title: "Fill Application",
       description:
-        "Go to the MLSA Portal, create your account, and click on Apply Now to fill out your details.",
+        "Go to the MSA Portal, create your account, and click on Apply Now to fill out your details.",
       icon: <FileText className="w-8 h-8" />,
     },
     {
@@ -45,7 +45,7 @@ const ApplicationProcess: React.FC = () => {
             Application Process
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Become Microsoft Learn Student Ambassador through a simple and easy process
+            Become Microsoft Student Ambassador through a simple and easy process
           </p>
         </div>
 

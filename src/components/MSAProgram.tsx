@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const MLSAProgram: React.FC = () => {
+const MSAProgram: React.FC = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
 
   const cards = [
     {
-      title: "What is the MLSA Program?",
-      content: "MLSA program empowers students to learn, lead, and share tech on campus — get trained by Microsoft, grow your skills, and help others explore the future of tech."
+      title: "What is the MSA Program?",
+      content: "MSA program empowers students to learn, lead, and share tech on campus — get trained by Microsoft, grow your skills, and help others explore the future of tech."
     },
     {
-      title: "Who can join the MLSA Program?",
-      content: "If you're a college student who loves tech, enjoys helping others, and wants to grow as a leader — the MLSA program is for you. Share your knowledge, run events, learn new skills, and become the go-to tech voice on your campus."
+      title: "Who can join the MSA Program?",
+      content: "If you're a college student who loves tech, enjoys helping others, and wants to grow as a leader — the MSA program is for you. Share your knowledge, run events, learn new skills, and become the go-to tech voice on your campus."
     },
     {
-      title: "What are the benefits of the MLSA Program?",
+      title: "What are the benefits of the MSA Program?",
       content: "Get career-boosting access to Microsoft events, official recognition as a Student Ambassador, free tools and cloud credits, and mentorship from Microsoft professionals to guide your journey."
     },
     {
@@ -35,10 +35,10 @@ const MLSAProgram: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-glow-blue">
-            The MLSA Program
+            The MSA Program
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the opportunities and benefits of becoming a Microsoft Learn Student Ambassador
+            Discover the opportunities and benefits of becoming a Microsoft Student Ambassador
           </p>
         </div>
 
@@ -81,4 +81,4 @@ const MLSAProgram: React.FC = () => {
   );
 };
 
-export default MLSAProgram;
+export default MSAProgram;

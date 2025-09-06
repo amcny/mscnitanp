@@ -45,7 +45,7 @@ const BenefitsGrid: React.FC = () => {
     },
     {
       title: "Microsoft Badges",
-      description: "We will encourage you to participate in events held by MLSAs and to use the microsoft learn platform to gain microsoft badges and polish your resume",
+      description: "We will encourage you to participate in events held by MSAs and to use the microsoft learn platform to gain microsoft badges and polish your resume",
       icon: <Award className="w-6 h-6" />,
       gradient: "from-green-500 to-cyan-400"
     },
@@ -115,7 +115,7 @@ const BenefitsGrid: React.FC = () => {
             Benefits & Opportunities
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Unlock amazing benefits and opportunities as part of MLSC
+            Unlock amazing benefits and opportunities as part of MSA
           </p>
         </div>
 

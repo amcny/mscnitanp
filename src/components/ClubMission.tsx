@@ -30,7 +30,7 @@ const ClubMission: React.FC = () => {
             Our Mission
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            Join a vibrant tech community where you can learn, lead, and grow together. Build real-world solutions, share knowledge, and make an impact with your peers.
+            Join a vibrant tech chapter where you can learn, lead, and grow together. Build real-world solutions, share knowledge, and make an impact with your peers.
           </p>
         </div>
 
